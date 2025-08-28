@@ -192,20 +192,21 @@ const handleSubmit = async (e) => {
           through thoughtful design and clean code. Currently pursuing B.Tech at Chandigarh University.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button
-            onClick={() => scrollToSection('projects')}
-            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-medium"
-          >
-            View My Work
-          </button>
-          <button
-            onClick={() => scrollToSection('contact')}
-            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-medium"
-          >
-            Get In Touch
-          </button>
-        </div>
+       <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+  <button
+    onClick={() => scrollToSection('projects')}
+    className="min-w-[180px] bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-medium"
+  >
+    View My Work
+  </button>
+  <button
+    onClick={() => scrollToSection('contact')}
+    className="min-w-[180px] bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-medium"
+  >
+    Get In Touch
+  </button>
+</div>
+
         
         <button
           onClick={() => scrollToSection('about')}
