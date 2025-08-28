@@ -25,13 +25,10 @@ const Portfolio = () => {
   };
 
   // Handle form input changes
-const handleInputChange = (e) => {
-  const { name, value } = e.target;
-  setFormData((prevData) => ({
-    ...prevData,
-    [name]: value,
-  }));
-};
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
 
   // Handle form submission
 const handleSubmit = async (e) => {
@@ -40,7 +37,7 @@ const handleSubmit = async (e) => {
   setSubmitMessage('');
 
   try {
-    const response = await fetch("http://localhost:5000/send-message", {
+    const response = await fetch("https://my-portfolio-u1tf.onrender.com/send-message", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -616,7 +613,7 @@ const handleSubmit = async (e) => {
       
       <footer className="bg-gray-900 text-white py-8 text-center">
         <p className="text-gray-400">
-          © 2025 Harshad Fozdar
+          © 2025 Harshad Fozdar. Designed with ❤️ and lots of ☕
         </p>
       </footer>
     </div>
