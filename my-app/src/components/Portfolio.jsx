@@ -201,7 +201,7 @@ const handleSubmit = async (e) => {
           </button>
           <button
             onClick={() => scrollToSection('contact')}
-            className="border-2 border-blue-600 text-white-600 px-8 py-3 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 font-medium"
+            className="border-2 border-blue-600 text-white-600 px-8 py-3 rounded-full hover:bg-blue-600 hover:text-blue transition-all duration-300 font-medium"
           >
             Get In Touch
           </button>
@@ -211,7 +211,7 @@ const handleSubmit = async (e) => {
           onClick={() => scrollToSection('about')}
           className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hover:text-blue-800 transition-colors"
         >
-          <ChevronDown size={32} className="text-white-600" />
+          <ChevronDown size={32} className="text-blue-600" />
         </button>
       </div>
     </section>
