@@ -318,12 +318,12 @@ const handleSubmit = async (e) => {
           </span>
         </h1>
         
-        <div className="text-2xl md:text-3xl text-gray-600 mb-8 font-light">
+        <div className="mb-8 flex max-w-3xl flex-wrap items-center justify-center gap-x-4 gap-y-2 text-center text-2xl font-light text-gray-600 md:text-3xl">
           <span className="inline-block animate-pulse">AI Engineer</span>
-          <span className="mx-4 text-blue-500">•</span>
-          <span className="inline-block animate-pulse" style={{animationDelay: '0.5s'}}>Full Stack Developer</span>
-          <span className="mx-4 text-purple-500">•</span>
-          <span className="inline-block animate-pulse" style={{animationDelay: '1s'}}>Problem Solver</span>
+          <span className="hidden text-blue-500 sm:inline">•</span>
+          <span className="inline-block animate-pulse" style={{ animationDelay: '0.5s' }}>Full Stack Developer</span>
+          <span className="hidden text-purple-500 sm:inline">•</span>
+          <span className="inline-block animate-pulse" style={{ animationDelay: '1s' }}>Problem Solver</span>
         </div>
         
         <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
