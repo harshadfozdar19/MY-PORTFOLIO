@@ -14,14 +14,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #535bf2;
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -31,24 +25,18 @@ body {
   color: #213547;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+#root {
+  min-height: 100vh;
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  background: #4f46e5;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+a {
+  text-decoration: none;
 }
 
-button:hover {
-  background: #3730a3;
+button,
+input,
+textarea {
+  font: inherit;
 }
 
 button:focus,
