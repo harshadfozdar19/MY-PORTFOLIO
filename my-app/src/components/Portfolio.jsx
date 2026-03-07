@@ -65,29 +65,72 @@ const Portfolio = () => {
 //   }
 // };
 
+// const handleSubmit = async (e) => {
+//   e.preventDefault();
+//   setIsSubmitting(true);
+//   setSubmitMessage("");
+
+//   try {
+//     await emailjs.send(
+//       "service_nhx8wrb",      // replace
+//       "template_g6jzhkt",     // replace
+//       {
+//         name: formData.name,
+//         email: formData.email,
+//         message: formData.message,
+//       },
+//       "RjtT_itcgzDTaHgjS"           // replace
+//     );
+
+//     setSubmitMessage("✅ Message sent successfully!");
+//     setFormData({
+//       name: "",
+//       email: "",
+//       message: "",
+//     });
+
+//   } catch (error) {
+//     console.error(error);
+//     setSubmitMessage("❌ Failed to send message.");
+//   }
+
+//   setIsSubmitting(false);
+// };
+
+
 const handleSubmit = async (e) => {
   e.preventDefault();
   setIsSubmitting(true);
   setSubmitMessage("");
 
   try {
+
+    // email to YOU
     await emailjs.send(
-      "service_nhx8wrb",      // replace
-      "template_g6jzhkt",     // replace
+      "service_nhx8wrb",
+      "template_ya3wktv",
       {
         name: formData.name,
         email: formData.email,
         message: formData.message,
       },
-      "RjtT_itcgzDTaHgjS"           // replace
+      "RjtT_itcgzDTaHgjS"
+    );
+
+    // auto reply to sender
+    await emailjs.send(
+      "service_nhx8wrb",
+      "template_g6jzhkt",
+      {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      },
+      "RjtT_itcgzDTaHgjS"
     );
 
     setSubmitMessage("✅ Message sent successfully!");
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
+    setFormData({ name: "", email: "", message: "" });
 
   } catch (error) {
     console.error(error);
@@ -96,6 +139,10 @@ const handleSubmit = async (e) => {
 
   setIsSubmitting(false);
 };
+
+
+
+
 
   const renderFloatingShapes = () => (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
